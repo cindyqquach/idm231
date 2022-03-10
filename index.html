@@ -11,8 +11,14 @@
     <title>IDM231_zodiacBirthFlower</title>
 </head>
 <body>
- <div class="page1">
-<!-- <div class="background"> <img src="images/galaxy_background2.png" alt="starBackground">  </div>-->
+ <div class="page1" id="top">
+    <div> 
+        <picture class="background">
+            <source media="(min-width:1440px)" srcset="images/galaxy_background2.png" alt="background"/> 
+            <source media="(min-width:768px)" srcset="images/galaxy_background2.png" alt="background"/> 
+            <img class="background" src="images/galaxy_background2.png" alt="background"> 
+        </picture>  
+    </div>
     <div class="page1-content"> 
         <header>
             <img class="orderSticker headerSticker1" src="graphics/headerFlower.png" alt="flower"> 
@@ -36,7 +42,23 @@
         </div>
         <div class="page1-exploreButton">
             <span class="dot">
-            <p class="exploreDesktop"> (EXPLORE THE GARDEN) </p>
+                <div class="page1-exploreButton-content"> 
+                    <picture class="downArrow">
+                        <source media="(min-width:1440px)" srcset="graphics/arrowBlack-Desktop.png" alt="arrowdown"/> 
+                        <source media="(min-width:768px)" srcset="graphics/arrowBlack.png" alt="arrowdown"/> 
+                        <a  href="#garden"> 
+                        <img class="downArrowIcon" src="graphics/arrowBlack.png" alt="arrowdown"> 
+                        </a>
+                    </picture> 
+                    <p class="exploreDesktop"> (EXPLORE THE GARDEN) </p>
+                    <picture id="garden" class="upArrow">
+                        <source class="upArrowDesktop" media="(min-width:1440px)" srcset="graphics/arrowBlack-Desktop.png" alt="arrowup"/> 
+                        <source class="upArrowTablet" media="(min-width:768px)" srcset="graphics/arrowBlack.png" alt="arrowup"/> 
+                        <a  href="#top"> 
+                        <img class="upArrowMobile" src="graphics/arrowBlack.png" alt="arrowup"> 
+                        </a>
+                    </picture> 
+                </div>
             </span>
         </div> 
     </div>
@@ -45,7 +67,7 @@
     <div class="page1-photo"> 
         <div> 
             <picture>
-              <source class="allFlowersPhotoDesktop" media="(min-width:1024px)" srcset="images/Artboard 2.png"/> 
+              <source class="allFlowersPhotoDesktop" media="(min-width:1440px)" srcset="images/Artboard 2.png"/> 
               <source class="allFlowersPhotoTablet" media="(min-width:768px)" srcset="images/Artboard 2.png"/> 
               <img class="allFlowersPhoto" src="images/Artboard 2.png" alt="AllFlowerPhoto"> 
             </picture> 
@@ -57,11 +79,9 @@
 <div class="page2"> 
     <div class="blank"></div>
     <div class="garden-content">
-    <div class="page2-content-intro">
+    <div class="page2-content-intro" >
         <div class="headerSticker"> 
             <img class="orderSticker headerSticker1" src="graphics/headerFlower.png" alt="flower"> 
-            <hr class="line1"> 
-            <img class="orderSticker headerSticker2" src="graphics/headerStar.png" alt="star"> 
             <div class="space1"> </div>
             <img class="orderSticker headerSticker3" src="graphics/headerGrass.png" alt="grass"> 
         </div>
@@ -83,7 +103,7 @@
                 <h1> HONEY <br>-SUCKLE  </h1>
                 </a>
                 <div class="readMore"> 
-                    <p> read more </p>
+                    <p class="readMoreText"> read more </p>
                     <span class="star">*</span> 
                     <a class="gotoSign" href="html/aries.html"> 
                         <img class="longArrow" src="graphics/arrow1.svg" alt="arrowLong">

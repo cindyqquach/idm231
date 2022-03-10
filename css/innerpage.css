@@ -13,6 +13,10 @@
     scroll-behavior: smooth;
     background-color: var(--color-white);  
 }
+html{
+    width: 100vw; 
+    height: 100vh; 
+}
 @media screen and (min-width:0px) {
 /*Illustration*/
     zodiacIllustration {
@@ -49,6 +53,8 @@
     .zodiacDescription{
         display: flex;
         flex-flow: column nowrap; 
+        width: 100%; 
+        height: auto;
     }
 /*ICONS*/ 
     .stickerZodiac {
@@ -103,33 +109,41 @@
 
 @media screen and (min-width: 768px){
 /*Title*/
+    .zodiacText{
+        margin: 0 var(--margin-for-text-tablet);
+    }
     .zodiacText h2 {
-        font: normal 24px/25px 'courier-prime', serif; 
-        margin: var(--margin-for-text-tablet); 
+        font: normal 20px/25px 'courier-prime', serif; 
+        margin: var(--margin-for-text-tablet) var(--margin-for-text-tablet) 0; 
     }
     .zodiacText h1 {
-        font: normal 55px/57px 'whyte-inktrap', sans-serif; 
+        font: normal 45px/57px 'whyte-inktrap', sans-serif; 
         margin: var(--margin-for-text) var(--margin-for-text-tablet); 
     }
     .zodiacDescription {
         width: 100%;
         height: auto;
+        border-radius: 20px;
+        padding-bottom: 10px; 
+
     }
     .zodiacText p {
-        font: normal 24px/30px 'courier-prime', serif; 
+        font: normal 18px/28px 'courier-prime', serif; 
     }
     footer h1 {
         margin-top: 20px; 
-        font: normal 45px/37px 'whyte-inktrap', sans-serif; 
+        font: normal 30px/37px 'whyte-inktrap', sans-serif; 
     }
     footer p {
-        font: normal 24px/25px 'courier-prime', serif;  
+        font: normal 20px/25px 'courier-prime', serif;  
     }}
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1440px){
     .container{
-        display: flex;
-        flex-flow: row nowrap;
+        display: grid;
+        grid-template-columns: 45% auto;
+        height: 100vh; 
+        margin-top: 100px; 
     }
     .pageOne, .pageTwo{
         width: 50%; 
@@ -139,6 +153,10 @@
         background-size: contain; 
     }
 /*Title*/
+    .zodiacText h1, .zodiacText h2{
+        text-align: center;
+        margin-left: 0; 
+    }
     .zodiacText h2 {
         font: normal 28px/35px 'courier-prime', serif; 
     }
@@ -147,11 +165,24 @@
     }
     .zodiacText p {
         font: normal 20px/28px 'courier-prime', serif; 
+        margin: 10px 40px
     }
-    
+    .zodiacDescription{
+        margin-bottom: 100px; 
+    }
     footer h1 {
         margin-top: 20px; 
     }
+    footer{
+        display: flex; 
+        flex-flow: row wrap; 
+        justify-content: space-between;
+        position: relative; 
+    }
+    .next{
+        margin-right: var(--margin-for-text-tablet);
+    }
+    
     footer p {
         font: normal 28px/35px 'courier-prime', serif;  
     }
