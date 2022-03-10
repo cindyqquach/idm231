@@ -1,0 +1,443 @@
+:root {
+    --color-black:#1B1B1B; 
+    --color-white: #FFFFD3; 
+    --margin-for-text: 20px; 
+    --margin-for-text-tablet: 60px; 
+    --margin-for-text-desktop: 15px; 
+}
+*{
+    box-sizing: border-box;
+    font-size: 100%;
+    font-family: 'whyte-inktrap', sans-serif;
+    font-family: 'courier-prime', serif;
+    scroll-behavior: smooth; 
+    color: var(--color-white); 
+    background: var(--color-black);
+}
+/*
+.background {
+    position: fixed; 
+    z-index: -10; 
+    width: 180%; 
+    height: auto; 
+    object-fit: contain;
+}*/ 
+@media screen  and (min-width: 0px) {
+/*Page1*/ 
+    .page1 {
+       height: 100vh; 
+       width: 100%; 
+    }
+    header {
+        display: grid;
+        grid-template-columns: 20% 17% 20% auto 40%;
+        margin: var(--margin-for-text) 8px;
+        align-items: end;
+    }
+/*Sticker*/ 
+    .line1{
+        display: block; 
+        border-top: 1px solid var(--color-white); 
+        width: 100%; 
+        height: auto; 
+        align-self: center;
+    }
+    header img {
+        background-color: transparent;
+    }
+    .headerSticker1, .headerSticker2 {
+        width: 80%; 
+        height: auto; 
+    }
+    .headerSticker1 {
+        justify-self: center;
+    }
+    .headerSticker3 {
+        width: 100%; 
+        height: auto; 
+        padding-right: var(--margin-for-text);
+    } 
+    .input-section{
+        display: flex; 
+        flex-flow: column nowrap;
+    }
+    main {
+        display: flex; 
+        flex-flow: column nowrap; 
+        margin-right: var(--margin-for-text);
+    }
+/* Discover ur...*/ 
+    main h1 {
+        font: bold 32px/38px 'whyte-inktrap', sans-serif; 
+        margin: 0 var(--margin-for-text); 
+    }
+    main h1 span {
+        font: normal 30px/38px 'whyte-inktrap', sans-serif; 
+    }
+/* Enter ur DOB */
+    label {
+        font: normal 18px/38px 'whyte-inktrap', sans-serif; 
+        margin: 10px var(--margin-for-text); 
+    }
+/* INPUT BOX*/ 
+    input {
+       border: none; 
+       border-bottom: 1px solid var(--color-white); 
+       margin: 0 var(--margin-for-text); 
+       font: normal 18px/38px 'courier-prime', serif; 
+       text-align: center;
+       background-color: transparent;
+       letter-spacing: 7px;
+       overflow: visible; 
+       color: var(--color-white);
+    }
+    input[type=date]:focus {
+        background-color: var(--color-white);
+        background-position: 25px;
+        color: var(--color-black);
+        align-items: center;
+    }
+/*Enter button*/ 
+    .enterButton {
+        font: normal 20px/38px 'courier-prime', serif; 
+        margin:  var(--margin-for-text); 
+        border-radius: 57px;
+        border: 1px solid var(--color-white);
+        cursor: pointer; 
+        padding: 10px 100px;
+        background-color: transparent;
+    }
+/*infoButton*/ 
+    .infoButton {
+        display: block; 
+        font: normal 30px/38px 'courier-prime', serif; 
+        border-radius: 50%; 
+        border: 1px solid var(--color-white);
+        text-align: center; 
+        cursor: pointer; 
+        padding: 10px 20px; 
+        background-color: transparent;
+        margin: 10px 20px;
+    }
+/*All Flower Photo*/ 
+    .allFlowersPhoto {
+       /* border: 230px solid #FFFFD3; */
+        margin: 20px 20px 90px;
+        width: 90%;
+        height: auto; 
+    }
+/*garden*/ 
+    .explore {
+        margin-top: -100px;
+        font: italic 17px/37px 'whyte-inktrap', sans-serif; 
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    .garden{
+        margin-top: 100px; 
+    }
+/*container for each sign*/
+    .container {
+        display: grid; 
+        grid-template-columns: 125px auto;
+        grid-template-areas: 
+        '.zodiacPhoto .zodiacText';
+        margin: 30px 15px; 
+    }
+    .zodiacPhoto {
+        width: 80%; 
+        height: auto; 
+        align-self: center;
+        margin: 5px; 
+        background-color: transparent;
+        justify-self: center;
+       
+    }
+    .longArrow {
+        width: 60%; 
+        height: auto; 
+        color: var(--color-white);
+        margin-left: 10px; 
+        align-self: center; 
+        justify-self: center;
+    }
+/*container for text*/ 
+    .zodiacText {
+        grid-template-columns: 25% 50% 25%;
+    }
+/* Sign: xx/xx - xx/xx*/ 
+    .zodiacText h2 {
+        font: normal 14px/14px 'courier-prime', serif; 
+        text-decoration: underline;
+        margin: 15px auto; 
+    }
+/*FLOWER*/ 
+    .zodiacText h1 {
+        font: normal 30px/35px 'whyte-inktrap', sans-serif; 
+        margin: 5px 0; 
+        width: 100%; 
+        height: auto; 
+    }
+/*read more*/ 
+    .zodiacText p {
+        font: normal 14px/24px 'whyte-inktrap', sans-serif; 
+    }
+    .gotoSign{
+        text-decoration: none;
+    }
+    .readMore {
+        display: grid; 
+        grid-template-columns: 40% 10% auto;
+        align-items: center;
+    }
+/***/
+    .star {
+        justify-self: center;
+        align-self: center; 
+    }
+    footer {
+        font: normal 15px/24px 'courier-prime', serif;
+        margin: 40px var(--margin-for-text) 15px; 
+    }
+    .page1-exploreButton, .page2-content-intro{
+        display: none; 
+    }
+    }
+
+@media screen and (min-width:768px) {
+    .headerSticker1, .headerSticker2 {
+        width: 50%; 
+        height: auto; 
+    }
+    .headerSticker3 {
+        width: 70%; 
+        height: auto; 
+        justify-self: end;
+    } 
+    main h1 {
+        font: bold 60px/68px 'whyte-inktrap', sans-serif; 
+        margin: var(--margin-for-text) var(--margin-for-text-tablet) 10px; 
+    }
+    main h1 span{
+        font: normal 40px/38px 'whyte-inktrap', sans-serif; 
+    }
+/*Enter dob*/ 
+    label {
+        font: normal 20px/38px 'whyte-inktrap', sans-serif; 
+        margin: 0 var(--margin-for-text-tablet) 20px; 
+    }
+/* INPUT BOX*/ 
+    input {
+        font: normal 25px/38px 'courier-prime', serif; 
+        margin:15px  var(--margin-for-text-tablet); 
+    }
+/*Enter button*/ 
+    .enterButton {
+        font: normal 25px/38px 'courier-prime', serif; 
+        margin: var(--margin-for-text) var(--margin-for-text-tablet); 
+    }
+/*infoButton*/ 
+    .infoButton {
+         margin: 10px var(--margin-for-text-tablet);
+    }
+/*container for each sign*/
+    .container {
+        width: 90%;
+        height: auto; 
+        grid-template-columns: 30% auto;
+        margin: var(--margin-for-text-tablet) 50px; 
+        border-radius: 40px; 
+        padding: 10px 46px; 
+        border: 1px solid var(--color-white);
+    }
+/* Sign: xx/xx - xx/xx*/ 
+    .zodiacText h2 {
+        font: normal 25px/38px 'courier-prime', serif; 
+        margin: 15px auto; 
+    }
+    .zodiacPhoto{
+        width: 100%; 
+        height: auto; 
+        margin-right: 50px; 
+    }
+
+/*FLOWER*/ 
+    .zodiacText h1 {
+        font: normal 50px/55px 'whyte-inktrap', sans-serif; 
+        letter-spacing: .5px;
+    }
+/*Read more*/
+    .readMore{
+        margin: 10px 0 20px; 
+    }
+    .zodiacText p, .star {
+        font: normal 25px/24px 'whyte-inktrap', sans-serif; 
+    }
+    .zodiacText p{
+        align-self: center;
+    }
+    .star {
+        align-self: center;
+        justify-self: center;
+    }
+    .longArrow {
+        width: 80%; 
+        height: auto; 
+    }
+    .page1-exploreButton, .page2-content-intro{
+        display: none; 
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    body{
+        margin: var(--margin-for-text-desktop) var(--margin-for-text-tablet) 0 ; 
+    }
+    .page1{
+    display: grid;
+    grid-template-columns: 40% auto;
+    grid-template-areas: 
+    "photo content";
+    width: 100%; 
+    height: auto; 
+    }
+    .page1-content{
+        grid-area: content;
+        width: 100%; 
+        height: auto;  
+    }
+    header{
+        margin: var(--margin-for-text-tablet) 0 0; 
+    }
+/*Discover*/ 
+    main h1 {
+        font: bold 70px/73px 'whyte-inktrap', sans-serif; 
+        letter-spacing: 1px;
+    }
+    main h1 span{
+        font: normal 65px/38px 'whyte-inktrap', sans-serif; 
+    }
+/*Enter...*/ 
+    label {
+        font: normal 30px/35px 'whyte-inktrap', sans-serif; 
+        text-align: center;
+        margin-top: 80px;
+        letter-spacing: .5px;
+    }
+/*All Flower photo*/ 
+    .page1-photo{
+        grid-area: photo;
+        width: 100%; 
+        height: auto; 
+    }
+    .allFlowersPhoto{
+        position: sticky; 
+        top: 10px; 
+        margin-top: var(--margin-for-text-tablet);
+    }
+    input {
+        margin: 0 200px; 
+        font: normal 28px/38px 'courier-prime', serif;
+    }
+/*Enter button*/ 
+    .enterButton {
+        font: normal 25px/35px 'courier-prime', serif; 
+        margin:  30px 220px; 
+        border-radius: 57px;
+        border: 1px solid var(--color-white);
+        cursor: pointer; 
+        padding: 10px 100px;
+        background-color: transparent;
+    }
+/*infoButton*/ 
+.infoButton {
+    margin: 10px var(--margin-for-text-tablet);
+    position: absolute; 
+    bottom: 100px; 
+    right: 10px; 
+}
+/*explore*/ 
+    .page1-exploreButton{
+        display: block;   
+        font: italic 17px/37px 'whyte-inktrap', sans-serif; 
+        letter-spacing: 1px;
+        text-align: center;  
+        position: relative; 
+        bottom: 20px; 
+        background-color: transparent;
+    }
+    .exploreDesktop{
+        text-align: center;  
+        position: relative; 
+        top: 260px; 
+        background-color: transparent;
+        z-index: 300; 
+    }
+    .dot{
+        height: 350px;
+        width: 350px;
+        background-color: var(--color-white);
+        border-radius: 50%;
+        display: inline-block;
+        position: relative; 
+        top: 260px; 
+        text-align: center;
+        z-index: 5; 
+    }
+/*Explore*/
+    .explore{
+        display: none;
+    }
+    .page2-content-intro{
+        display: block;
+    }
+/*Garden page*/ 
+.page2{
+    display: grid;
+    grid-template-columns: 40% auto;
+    grid-template-areas: 
+    ". . content";
+    width: 100%; 
+    height: auto; 
+    }
+.garden-content{
+    grid-area: content;
+}
+.garden{
+    display: flex;
+    flex-flow: column nowrap;
+}
+.container{
+    width: 40%; 
+    height: auto; 
+}
+.headerSticker {
+    display: grid;
+    grid-template-columns: 20% 17% 20% auto 40%;
+    margin: var(--margin-for-text) 8px;
+    align-items: end;
+}
+.page2-content-intro-text {
+    font: normal 30px/35px 'whyte-inktrap', sans-serif; 
+    text-align: center;
+    margin-top: 50px;
+    letter-spacing: .5px;
+}
+/* Sign: xx/xx - xx/xx*/ 
+.zodiacText h2 {
+    font: normal 18px/38px 'courier-prime', serif; 
+    margin: 15px auto; 
+}
+.zodiacPhoto{
+    width: 100%; 
+    height: auto; 
+    margin-right: 50px; 
+}
+
+/*FLOWER*/ 
+.zodiacText h1 {
+    font: normal 40px/55px 'whyte-inktrap', sans-serif; 
+    letter-spacing: .5px;
+}
+}
+
