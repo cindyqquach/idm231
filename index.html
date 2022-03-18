@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="https://use.typekit.net/sjo6jpn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/homepage.css">
     <title>IDM231_zodiacBirthFlower</title>
@@ -14,12 +15,14 @@
  <div class="page1" id="top">
     <div> 
         <picture class="background">
-            <source media="(min-width:1440px)" srcset="images/galaxy_background2.png" alt="background"/> 
-            <source media="(min-width:768px)" srcset="images/galaxy_background2.png" alt="background"/> 
-            <img class="background" src="images/galaxy_background2.png" alt="background"> 
+            <source media="(min-width:1440px)" srcset="images/flower_bg.jpg" alt="background"/> 
+            <source media="(min-width:768px)" srcset="images/flower_bg.jpg" alt="background"/> 
+            <img class="background" src="images/flower_bg - mobile.jpg" alt="background"> 
         </picture>  
     </div>
     <div class="page1-content"> 
+        <div class="transparentBlackBg"> </div>
+        <div class="page1-content-text">
         <header>
             <img class="orderSticker headerSticker1" src="graphics/headerFlower.png" alt="flower"> 
             <hr class="line1"> 
@@ -31,18 +34,17 @@
         <div class="input-section"> 
         <main> 
             <h1> DISCOVER YOUR <br>BIRTH FLOWER <span>* </span></h1> 
-            <label for="birthday">Enter your Birthday below </label>
-            <input type="date" id="birthday" name="birthday">
-            <button class="enterButton" type="submit"> Enter </button>
+            <form action="">
+                <label for="birthdayInput">Enter your Birthday below </label>
+                <input type="date" id="birthdayInput" class="js-date-input" name="birthday">
+                <button class="enterButton js-submit-button" type="submit"> Enter </button>
+                <div id="invalid_date" hidden>Invalid date</div>
+            </form>
         </main>
-    
-        <div class="infoButtonContainer"> 
-            <button class="infoButton"> i </button> 
-        </div>
-        </div>
-        <div class="page1-exploreButton">
-            <span class="dot">
-                <div class="page1-exploreButton-content"> 
+    </div>
+    </div>
+
+   <!-- 
                     <picture class="downArrow">
                         <source media="(min-width:1440px)" srcset="graphics/arrowBlack-Desktop.png" alt="arrowdown"/> 
                         <source media="(min-width:768px)" srcset="graphics/arrowBlack.png" alt="arrowdown"/> 
@@ -50,37 +52,40 @@
                         <img class="downArrowIcon" src="graphics/arrowBlack.png" alt="arrowdown"> 
                         </a>
                     </picture> 
-                    <p class="exploreDesktop"> (EXPLORE THE GARDEN) </p>
-                    <picture id="garden" class="upArrow">
+                    <picture class="upArrow">
                         <source class="upArrowDesktop" media="(min-width:1440px)" srcset="graphics/arrowBlack-Desktop.png" alt="arrowup"/> 
                         <source class="upArrowTablet" media="(min-width:768px)" srcset="graphics/arrowBlack.png" alt="arrowup"/> 
                         <a  href="#top"> 
                         <img class="upArrowMobile" src="graphics/arrowBlack.png" alt="arrowup"> 
-                        </a>
-                    </picture> 
-                </div>
+                        </a> -->  
+    <div class="page1-exploreButton">
+            <span class="dot">
+                <a  href="#garden"> <div class="page1-exploreButton-content"> 
+                    <p class="exploreDesktop"> (EXPLORE THE GARDEN) &darr; </p>
+                </div> </a>
             </span>
-        </div> 
-    </div>
-
-    
+    </div> 
+</div>
     <div class="page1-photo"> 
-        <div> 
-            <picture>
-              <source class="allFlowersPhotoDesktop" media="(min-width:1440px)" srcset="images/Artboard 2.png"/> 
-              <source class="allFlowersPhotoTablet" media="(min-width:768px)" srcset="images/Artboard 2.png"/> 
-              <img class="allFlowersPhoto" src="images/Artboard 2.png" alt="AllFlowerPhoto"> 
-            </picture> 
-          </div>
     </div>
         <p class="explore"> (EXPLORE THE GARDEN) </p> 
+    <div class="infoButtonContainer"> 
+        <button class="infoButton" onclick="infoButton()">i</button>
+        <div id="infoText">
+            <h1> Discover your Birth Flower </h1>
+            <p>Simply enter your birthday into the box, then click the Enter button to see which of these flowers is your Birth Flower.</p>
+            <p> You can also click Explore the garden to see which flowers is the Birth Flower is of which zodiac sign.</p>
+            <img class="stickerZodiac" src="graphics/footerIcon.png"> 
+        </div>
+        <div class="background-blur"> </div>
+    </div>
 </div> 
 
-<div class="page2"> 
+<div class="page2" > 
     <div class="blank"></div>
-    <div class="garden-content">
+    <div class="garden-content" id="garden">
     <div class="page2-content-intro" >
-        <div class="headerSticker"> 
+        <div class="headerSticker-page2 headerSticker" > 
             <img class="orderSticker headerSticker1" src="graphics/headerFlower.png" alt="flower"> 
             <div class="space1"> </div>
             <img class="orderSticker headerSticker3" src="graphics/headerGrass.png" alt="grass"> 
@@ -97,7 +102,7 @@
                 </a>
             </div>
 
-            <div class="zodiacText">  
+            <div class="zodiacText" id="Aries">  
                 <h2>Aries: 03&#47;21 &#8212; 04&#47;20</h2> 
                 <a class="gotoSign" href="html/aries.html"> 
                 <h1> HONEY <br>-SUCKLE  </h1>
@@ -119,7 +124,7 @@
                 </a>
             </div>
 
-            <div class="zodiacText"> 
+            <div class="zodiacText"  id="Taurus"> 
                 <a class="gotoSign" href="html/taurus.html"> 
                 <h2>Taurus: 04&#47;21 &#8212; 05&#47;21 </h2> </a>
                 <h1> POPPY </h1>
@@ -140,7 +145,7 @@
                 </a>
             </div>
 
-            <div class="zodiacText"> 
+            <div class="zodiacText"  id="Gemini"> 
                 <a class="gotoSign" href="html/gemini.html"> 
                 <h2>Gemini: 05&#47;22 &#8212; 06&#47;21 </h2> </a>
                 <h1> LAVENDER  </h1>
@@ -161,7 +166,7 @@
                 </a>
             </div>
 
-            <div class="zodiacText"> 
+            <div class="zodiacText"  id="Cancer"> 
                 <a class="gotoSign" href="html/cancer.html"> 
                 <h2>Cancer: 06&#47;22 &#8212; 07&#47;22 </h2> </a>
                 <h1> WHITE ROSE </h1>
@@ -182,7 +187,7 @@
                 </a>
             </div>
 
-            <div class="zodiacText"> 
+            <div class="zodiacText"  id="Leo"> 
                 <a class="gotoSign" href="html/leo.html"> 
                 <h2>Leo: 07&#47;23 &#8212; 08&#47;22 </h2> </a>
                 <h1> SUN <br>-FLOWER </h1>
@@ -203,7 +208,7 @@
                 </a>
             </div>
 
-            <div class="zodiacText"> 
+            <div class="zodiacText" id="Virgo"> 
                 <a class="gotoSign" href="html/virgo.html"> 
                 <h2>Virgo: 08&#47;23 &#8212; 09&#47;23</h2> </a>
                 <h1> BUTTERCUP </h1>
@@ -224,7 +229,7 @@
                 </a>
             </div>
 
-            <div class="zodiacText"> 
+            <div class="zodiacText"  id="Libra"> 
                 <a class="gotoSign" href="html/libra.html"> 
                 <h2>Libra: 09&#47;24 &#8212; 10&#47;23</h2> </a>
                 <h1> ROSE</h1>
@@ -245,7 +250,7 @@
                 </a>
             </div>
 
-            <div class="zodiacText"> 
+            <div class="zodiacText"  id="Scorpio"> 
                 <a class="gotoSign" href="html/scorpio.html"> 
                 <h2>Scorpio: 10&#47;24 &#8212; 11&#47;22 </h2> </a>
                 <h1> GERANIUM </h1>
@@ -266,7 +271,7 @@
                 </a>
             </div>
 
-            <div class="zodiacText"> 
+            <div class="zodiacText"  id="Sagittarius"> 
                 <a class="gotoSign" href="html/saggit.html"> 
                 <h2>Sagittarius: 11&#47;23 &#8212; 12&#47;21 </h2> </a>
                 <h1> CARNATION </h1>
@@ -287,7 +292,7 @@
                 </a>
             </div>
 
-            <div class="zodiacText"> 
+            <div class="zodiacText"  id="Capricorn"> 
                 <a class="gotoSign" href="html/capri.html"> 
                 <h2>Capricorn: 12&#47;22 &#8212; 01&#47;20 </h2> </a>
                 <h1> PANSY </h1>
@@ -308,7 +313,7 @@
                 </a>
             </div>
 
-            <div class="zodiacText"> 
+            <div class="zodiacText"  id="Aquarius"> 
                 <a class="gotoSign" href="html/aqua.html"> 
                 <h2>Aquarius: 01&#47;21 &#8212; 02&#47;19</h2> </a>
                 <h1> ORCHID  </h1>
@@ -329,7 +334,7 @@
                 </a>
             </div>
 
-            <div class="zodiacText"> 
+            <div class="zodiacText"  id="Pisces"> 
                 <a class="gotoSign" href="html/pisces.html"> 
                 <h2>Pisces: 02&#47;20 &#8212; 03&#47;20</h2> </a>
                 <h1> WATER <br>-LILY </h1>
@@ -346,8 +351,11 @@
 </div>
 </div>
 
-    <footer> 
-        <p class="credit"> Cindy Quach &copy; 2022</p>
-    </footer>
+<footer> 
+    <p class="credit"> Cindy Quach &copy; 2022</p>
+</footer>
+<script src="js/app.js"></script> 
+<script src="js/audio.js"></script>
+<script src="js/infoButton-shownhide.js"></script>
 </body>
 </html>

@@ -3,6 +3,7 @@
     --color-white: #FFFFEB; 
     --margin-for-text: 20px; 
     --margin-for-text-tablet: 30px; 
+    --margin-left-right-desktop: 50px; 
 }
 
 *{  
@@ -139,10 +140,36 @@ html{
     }}
 
 @media screen and (min-width: 1440px){
+    nav img{
+        width: 4%; 
+        height: auto; 
+        position: absolute; 
+        top: 45px; 
+        left: 35px ; 
+        z-index: 200;
+        background-color: transparent;
+        position: fixed; 
+    }
     .container{
         display: grid;
-        grid-template-columns: 45% auto;
+        grid-template-columns: 50% auto;
         height: 100vh; 
+        
+        grid-template-areas: "photo text";
+    }
+    .zodiacPhoto{
+        grid-area: photo; 
+        display: block; 
+    }
+    .zodiacIllustration{
+        width: 50%; 
+        object-fit: contain;
+        height: auto; 
+        position: fixed; 
+        margin-top: 0; 
+    }
+    .zodiacContent{
+        grid-area: text; 
         margin-top: 100px; 
     }
     .pageOne, .pageTwo{
@@ -175,16 +202,18 @@ html{
     }
     footer{
         display: flex; 
-        flex-flow: row wrap; 
+        flex-flow: row nowrap; 
         justify-content: space-between;
         position: relative; 
     }
     .next{
-        margin-right: var(--margin-for-text-tablet);
+        margin-right:var(--margin-left-right-desktop);
+    }
+    .prev{
+        margin-left: var(--margin-left-right-desktop);
     }
     
     footer p {
         font: normal 28px/35px 'courier-prime', serif;  
     }
-    
 }
